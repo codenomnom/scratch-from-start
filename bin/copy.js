@@ -1,6 +1,6 @@
 const fs = require('fs-extra');
 
-fs.emptyDirSync('./dist');
-fs.copySync('./src/images/', './dist/images/')
-fs.copySync('./src/scripts/', './dist/scripts/')
-fs.copySync('./src/index.html', './dist/index.html')
+fs.emptyDirSync('./docs');
+fs.copySync('./src/images/', './docs/images/')
+fs.copySync('./src/scripts/', './docs/scripts/')
+fs.copySync('./src/index.html', './docs/index.html')
