@@ -8,7 +8,7 @@
     "build": "npm-run-all copy scss",
     "copy": "node bin/copy.js",
     "serve": "live-server src/",
-    "scss": "node-sass --output-style compressed --linefeed lf src/styles/main.scss src/styles/main.css",
+    "scss": "node-sass --output-style compressed --linefeed lf src/styles/main.scss dist/styles/main.css",
     "scss:watch": "node-sass -w src/styles -o src/styles",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
