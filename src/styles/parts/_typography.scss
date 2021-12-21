@@ -129,8 +129,8 @@ a {
       content: ' ';
       display: inline-block;
       background-color: #0D112B;
-      -webkit-mask-image: url("/images/external.svg");
-      mask-image: url("/images/external.svg");
+      -webkit-mask-image: url("../images/external.svg");
+      mask-image: url("../images/external.svg");
       transition: background-color .3s ease;
     }
 
