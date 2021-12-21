@@ -1,0 +1,16 @@
+article.about {
+  height: 0;
+  overflow: hidden;
+  background-color: $color-could;
+
+  .about-wrapper {
+    width: 800px;
+    justify-content: flex-start;
+  }
+
+  transition: height .3s ease;
+
+  &:target {
+    height: 50vh;
+  }
+}

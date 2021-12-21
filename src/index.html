@@ -13,16 +13,39 @@
 
 <body>
 
-  <aside>
-    <a href="#">v.0.0.1</a>
+  <article id="about" class="about column">
+    <div class="about-wrapper">
+      <h1>
+        About
+      </h1>
+    </div>
+  </article>
+
+<!--  <aside class="bottom left">-->
+<!--    <a href="#" class="no-decoration transparency" title="go to top"><img src="images/arrow-66.svg" alt=""></a>-->
+<!--  </aside>-->
+
+  <aside class="top right">
+    <a href="#" class="no-decoration transparency" title="Print version"><img src="images/printer-4.svg" alt=""></a>
+<!--    <a href="#" class="no-decoration transparency" title=""><img src="images/help-3.svg" alt=""></a>-->
+    <a href="#about" id="about-btn" class="no-decoration transparency" title="About"><img src="images/info-8.svg" alt=""></a>
+    <a href="https://github.com/codenomnom/scratch-from-start" class="no-external" title="Follow @ Github" target="_blank">
+      <img src="images/github-1.svg" alt="">
+    </a>
+<!--    <a href="#" class="no-decoration transparency" title="Follow @ Twitter"><img src="images/twitter-4.svg" alt=""></a>-->
   </aside>
 
-  <section id="intro" class="column mw800">
+  <aside class="bottom right">
+    <a href="https://github.com/codenomnom/scratch-from-start" target="_blank" class="no-external underlined colorful">v.0.0.1</a>
+  </aside>
+
+  <section class="intro column mw800">
+    <a href="#" class="intro-logo no-decoration">
+      <img src="images/document.png" width="32" alt="anchor">
+    </a>
+
     <h1>
-      <a href="#" class="home">
-        <img src="images/document.png" width="32" alt="anchor">
-      </a>
-      <s>Scratch</s> From Start</h1>
+      <s>Scratch</s> From Start
     </h1>
 
     <p>
@@ -55,16 +78,20 @@
   <nav class="toc column">
     <section class="chapter">
       <div class="chapter-container">
-        <h3>Chapter 1: Foundation</h3>
+        <h3><a href="#chapter-1~foundation">Chapter 1: Foundation</a></h3>
         <ul>
           <li>
             <h4>01 &mdash; Repository</h4>
 
             <ol>
               <li>
-                1. Setup repository
+                <a href="#" class="no-decoration no-hover">1. Setup repository</a>
                 <ol type="a">
-                  <li>a. Set <code>git</code> name & email <em class="l1" data-help="important">important</em></li>
+                  <li>
+                    <a href="#" class="no-decoration no-hover2">
+                      a. Set <code>git</code> name & email <em class="l1" data-help="important">important</em>
+                    </a>
+                  </li>
                   <li>b. Pick git workflow <em class="l1" data-help="important">important</em></li>
                   <li>c. Protect master branch (enforce PRs) <em class="l2" data-help="preferred">preferred</em></li>
                   <li>d. Configure pipeline <em class="l3" data-help="extra">extra</em></li>
@@ -224,45 +251,46 @@
 
   <main class="column mw800">
     <section>
-      <h2 class="content-heading"><a href="#" class="anchor">Chapter 1: Foundation</a></h2>
+      <h2 class="content-heading"><a href="#chapter-1~foundation" class="anchor" id="chapter-1~foundation">Chapter 1: Foundation</a></h2>
 
       <article>
-        <h3 class="content-heading"><a href="#" class="anchor">01 &mdash; Repository</a></h3>
+        <h3 class="content-heading"><a href="#01-repository" class="anchor" id="01-repository">01 &mdash; Repository</a></h3>
 
-        <h4><a href="#" class="anchor">1.1. Setup repository</a></h4>
+        <h4><a href="#setup-repository" class="anchor" id="setup-repository">1.1. Setup repository</a></h4>
         <p>
           There are a few things you need to do before coding - configure your <code>Git</code>.
         </p>
 
 
         <article>
-          <h5><a href="#" class="anchor">1.1.A Configure name & email</a> <em class="l1" data-help="important">important</em></h5>
+          <h5><a href="#configure-name-and-email" class="anchor" id="configure-name-and-email">1.1.A Configure name & email</a> <em class="l1" data-help="important">important</em></h5>
           <p>
             It's very often that you have multiple accounts for your git provider.
             It's <strong>crucial</strong> that you configure your local repository to use the appropriate name and email.
           </p>
 
           <p>
-            <pre><code>git config user.name <i>&rarr; shows your current name</i>
-              git config user.email <i>&rarr; show your current email</i>
+            <pre><code>git config user.name <i># shows your current name</i>
+              git config user.email <i># show your current email</i>
 
-              git config user.name "John Doe" <i>&rarr; set name in current repository</i>
-              git config user.email "john@doe.com" <i>&rarr; set email in current repository</i>
+              git config user.name "John Doe" <i># set name in current repository</i>
+              git config user.email "john@doe.com" <i># set email in current repository</i>
             </code></pre>
           </p>
         </article>
 
         <article>
-          <h5><a href="#" class="anchor">1.1.B Pick git workflow</a> <em class="l1" data-help="important">important</em></h5>
+          <h5><a href="#pick-git-workflow" class="anchor" id="pick-git-workflow">1.1.B Pick git workflow</a> <em class="l1" data-help="important">important</em></h5>
           <p>
             Getting this right is important even if you work alone, because of consistency.
-            Any team members should be synchronized upfront on the <a href="https://www.atlassian.com/git/tutorials/comparing-workflows" target="_blank">git workflow</a> to be used.
+            Any team members should be synchronized upfront on the
+            <a href="https://www.atlassian.com/git/tutorials/comparing-workflows" target="_blank" class="underlined colorful">git workflow</a> to be used.
             Simple GitFlow would suffice. The decision should be well documented somewhere easily accessible.
           </p>
         </article>
 
         <article>
-          <h5><a href="#" class="anchor">1.1.C Protect master branch (enforce PRs)</a> <em class="l2" data-help="great">great</em></h5>
+          <h5><a href="#protect-master-branch" class="anchor" id="protect-master-branch">1.1.C Protect master branch (enforce PRs)</a> <em class="l2" data-help="great">great</em></h5>
           <p>
             Master (main) branch should be protected so no code ends up there directly.
             This would enforce usage of PRs, which are a necessity if working in a team.
@@ -286,7 +314,7 @@
       </article>
 
       <article>
-        <h3 class="content-heading"><a href="#" class="anchor">02 &mdash; Basics</a></h3>
+        <h3 class="content-heading"><a href="#02-basics" class="anchor" id="02-basics">02 &mdash; Basics</a></h3>
 
         <h4><a href="#" class="anchor">1.1. Setup repository</a></h4>
         <p>
@@ -336,5 +364,26 @@
     </section>
   </main>
 
+  <script>
+    const aboutSection = document.getElementById('about')
+    const aboutBtn = document.getElementById('about-btn');
+    aboutBtn.addEventListener('click', (e) => {
+      // TODO: deal with this mess - it needs to keep proper history
+      if (location.hash === '#about') {
+        e.preventDefault();
+        window.location.hash = '';
+        history.pushState('', document.title, window.location.pathname + window.location.search);
+      }
+    });
+
+    window.onhashchange = (e) => {
+      // console.log(location.hash);
+      if (location.hash === '#about') {
+        aboutSection?.classList.add('expanded');
+      } else {
+        aboutSection?.classList.remove('expanded');
+      }
+    };
+  </script>
 </body>
 </html>

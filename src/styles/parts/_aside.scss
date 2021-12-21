@@ -1,7 +1,50 @@
 aside {
   position: fixed;
-  bottom: 2px;
-  right: 6px;
-
   font-size: 12px;
+
+  $aside-margin: 10px;
+
+  &.top {
+    top: $aside-margin;
+  }
+
+  &.left {
+    left: $aside-margin;
+  }
+
+  &.right {
+    right: $aside-margin;
+  }
+
+  &.bottom {
+    bottom: $aside-margin;
+  }
+
+  &.bottom.left {
+
+  }
+
+  &.top.right, &.bottom.left {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      opacity: .5;
+      margin-bottom: 2px;
+
+      img {
+        width: 21px;
+        height: 21px;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &.bottom.right {
+    bottom: 2px;
+    right: 6px;
+  }
 }
