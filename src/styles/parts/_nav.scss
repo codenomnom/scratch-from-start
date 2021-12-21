@@ -1,0 +1,62 @@
+nav {
+  padding: 0 10%;
+
+  .chapter {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0 2%;
+
+    &-container {
+      ul, ol {
+        list-style: none;
+      }
+
+      ul {
+        padding-inline-start: 0;
+      }
+
+      ol {
+        padding-inline-start: 26px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  @include media("<2xl") {
+    section.chapter {
+      margin: 0 1%;
+    }
+  }
+
+  @include media("<xl") {
+    flex-wrap: wrap;
+    section.chapter {
+      flex-basis: 50%;
+      margin: 0;
+    }
+    section.filler {
+      flex-basis: 50%;
+    }
+  }
+
+  @include media("<md") {
+    section.chapter {
+      flex-basis: 100%;
+    }
+  }
+
+  @include media("<3xl") {
+    padding: 0 6%;
+  }
+
+  @include media("<2xl") {
+    padding: 0 3%;
+  }
+
+  @include media("<xl") {
+    padding: 0 2%;
+  }
+}

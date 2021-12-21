@@ -1,0 +1,11 @@
+section article article {
+  padding-left: 20px;
+
+  h5 {
+    margin-block-end: 0.5rem;
+  }
+
+  & > p {
+    margin-block-start: 0;
+  }
+}
