@@ -29,14 +29,14 @@
     <a href="#" class="no-decoration transparency" title="Print version"><img src="images/printer-4.svg" alt=""></a>
 <!--    <a href="#" class="no-decoration transparency" title=""><img src="images/help-3.svg" alt=""></a>-->
     <a href="#about" id="about-btn" class="no-decoration transparency" title="About"><img src="images/info-8.svg" alt=""></a>
-    <a href="https://github.com/codenomnom/scratch-from-start" class="no-external" title="Follow @ Github" target="_blank">
+    <a href="https://github.com/codenomnom/scratch-from-start" class="no-external" title="Open Source Project" target="_blank">
       <img src="images/github-1.svg" alt="">
     </a>
 <!--    <a href="#" class="no-decoration transparency" title="Follow @ Twitter"><img src="images/twitter-4.svg" alt=""></a>-->
   </aside>
 
   <aside class="bottom right">
-    <a href="https://github.com/codenomnom/scratch-from-start" target="_blank" class="no-external underlined colorful">v.0.0.1</a>
+    <a href="https://github.com/codenomnom/scratch-from-start" target="_blank" class="no-external underlined colorful" title="CHANGELOG">v.0.0.1</a>
   </aside>
 
   <section class="intro column mw800">
@@ -107,19 +107,16 @@
 
             <ol>
               <li>
-                1. Initialize the Application
+                1. Implement run scripts
                 <ol type="a">
-                  <li>1.1. Create blank project</li>
-                  <li>1.2. Include run scripts</li>
+                  <li>1.1. Add instructions in the <kbd>README</kbd> <em class="l1" data-help="important">important</em></li>
                 </ol>
               </li>
 
-              <li>2. Add <code>run instructions</code> in the <kbd>README</kbd> <em class="l1" data-help="important">important</em></li>
-
               <li>
-                3. Add <kbd>CHANGELOG</kbd> placeholder <em class="l2" data-help="great">great</em>
+                3. Create a <code>CHANGELOG</code> <em class="l2" data-help="great">great</em>
                 <ol type="a">
-                  <li>3.1. Select convention and document it <em class="l2" data-help="great">great</em></li>
+                  <li>3.1. Select a style and document it<em class="l2" data-help="great">great</em></li>
                   <li>3.2. Enforce with a pre-commit hook <em class="l3" data-help="extra">extra</em></li>
                   <li>3.3. Automatic changelog generator <em class="l3" data-help="extra">extra</em></li>
                 </ol>
@@ -132,22 +129,21 @@
 
             <ol>
               <li>
-                1. Setup linting
+                1. Static code analytics
                 <ol type="a">
-                  <li>1.2. Make sure it lints! <em class="l1"data-help="important">important</em></li>
+                  <li>1.2. Make sure it lints <em class="l1"data-help="important">important</em></li>
                   <li>1.2. Enable auto fix / code format <em class="l2" data-help="great">great</em></li>
-                  <li>1.3. Configure git pre-commit hook <em class="l2" data-help="great">great</em></li>
+                  <li>1.3. Configure <code>git</code> pre-commit hook <em class="l2" data-help="great">great</em></li>
+                  <li>1.4. Files & folders linting <em class="l3" data-help="extra">extra</em></li>
                 </ol>
               </li>
 
               <li>
-                2. Configure test suite (if not MVP/POC) <em class="l2" data-help="great">great</em>
+                2. Configure test suite (<i>if not MVP/POC</i>) <em class="l2" data-help="great">great</em>
                 <ol type="a">
                   <li>2.1. Configure test coverage tool <em class="l3" data-help="extra">extra</em></li>
                 </ol>
               </li>
-
-              <li>3. Configure files & folder linting (ls-lint) <em class="l3" data-help="extra">extra</em></li>
             </ol>
           </li>
         </ul>
@@ -186,20 +182,21 @@
             <h4>05 &mdash; Styles Configuration</h4>
 
             <ol>
-              <li>1. Style lint</li>
-              <li>2. Global reset/normalize</li>
-              <li>3. Preprocessor <i>(SCSS, Stylus)</i></li>
+              <li>1. Style linting</li>
               <li>
-                4. Files & Folders
+                2. Defaults & Placeholders
                 <ol type="a">
-                  <li>4.1. Variables</li>
-                  <li>4.2. Typography</li>
-                  <li>4.3. Overrides</li>
-                  <li>4.4. Responsiveness</li>
+                  <li>2.1. Global reset/normalize</li>
+                  <li>2.1. Variables & typography</li>
+                  <li>2.2. Overrides & mixins</li>
+                  <li>2.3. Responsive & media queries</li>
+<!--                  <li>4.2. Typography</li>-->
+<!--                  <li>4.3. Overrides</li>-->
+<!--                  <li>4.4. Responsiveness</li>-->
                 </ol>
               </li>
-              <li>5. Browser list</li>
-              <li>6. Icons pack</li>
+              <li>3. Preprocessor <i>(SCSS, Stylus)</i></li>
+              <li>4. Browser list</li>
             </ol>
           </li>
         </ul>
@@ -252,6 +249,10 @@
   <main class="column mw800">
     <section>
       <h2 class="content-heading"><a href="#chapter-1~foundation" class="anchor" id="chapter-1~foundation">Chapter 1: Foundation</a></h2>
+      <p>
+        Each new project setup contains a few steps <u>regardless</u> of the technology used, or any other specifics.
+        Some of them might look strange, btu they follow the best proven practices that would save you numerous hours of troubleshooting and bug hunting.
+      </p>
 
       <article>
         <h3 class="content-heading"><a href="#01-repository" class="anchor" id="01-repository">01 &mdash; Repository</a></h3>

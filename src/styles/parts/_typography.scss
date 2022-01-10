@@ -92,6 +92,8 @@ a {
 
   &:not(.no-external) {
     &[target="_blank"] {
+      //background: url("../images/external.svg") center right no-repeat;
+      //padding-right: 20px;
       &:after {
         width: 14px;
         height: 14px;
@@ -106,23 +108,33 @@ a {
   }
 
   &.underlined {
-    &:before {
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      left: 0;
-      bottom: 2px;
-      content: ' ';
-      background-color: #F22F46;
-      transition: all .3s ease; // FIXME
-      opacity: .4;
-    }
+    // v2
+    padding: 0 3px;
+    box-shadow: inset 0 -1px 0px 0px $color-must;
+    transition: box-shadow .15s ease, color .15s ease;
 
     &:hover {
-      &:before {
-        opacity: 1 !important;
-      }
+      color: #fff !important;
+      box-shadow: inset 0 -26px 0 0 $color-must;
     }
+    // v1
+    //&:before {
+    //  position: absolute;
+    //  width: 100%;
+    //  height: 1px;
+    //  left: 0;
+    //  bottom: 2px;
+    //  content: ' ';
+    //  background-color: #F22F46;
+    //  transition: all .3s ease; // FIXME
+    //  opacity: .4;
+    //}
+    //
+    //&:hover {
+    //  &:before {
+    //    opacity: 1 !important;
+    //  }
+    //}
   }
 
   &.colorful {
@@ -131,6 +143,7 @@ a {
 
       &:after {
         background-color: #F22F46;
+        background-color: #FFF;
       }
     }
   }
