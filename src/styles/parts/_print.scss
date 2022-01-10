@@ -1,0 +1,8 @@
+@media print {
+  nav {
+    flex-wrap: wrap; /* TODO: move to main.css? */
+  }
+  nav section {
+    flex-basis: 100%;
+  }
+}

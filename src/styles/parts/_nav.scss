@@ -22,6 +22,15 @@ nav {
         font-size: 14px;
         font-weight: 500;
       }
+
+      a {
+        &:hover {
+          &:before {
+            display: none; // TODO: put before only if link is not in the nav
+          }
+          text-decoration: underline;
+        }
+      }
     }
   }
 
