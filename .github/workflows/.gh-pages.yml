@@ -36,4 +36,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          cname: scratchfromstart.com
           commit_message: ${{ github.event.head_commit.message }}
