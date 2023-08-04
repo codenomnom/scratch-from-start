@@ -1,0 +1,6 @@
+{%- assign min = minimumLevel | default: 0 -%}
+{% if page.data.level > min %}
+  {% if page.data.priority %}
+    {% chip page.data.priority %}
+  {% endif %}
+{% endif %}

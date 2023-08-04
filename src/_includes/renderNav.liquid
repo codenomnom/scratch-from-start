@@ -1,0 +1,17 @@
+<nav class="toc column">
+  {% for page in pages %}
+    <section class="chapter">
+      <div class="chapter-container">
+        {% render 'renderNavPage', page: page, formatting: formatting %}
+
+        {% if forloop.index0 == 1 %}
+          <h5 style="display: inline-block">Outcome:</h5> Make sure it runs! {% chip "important" %}
+        {% endif %}
+      </div>
+    </section>
+
+    {% if forloop.last %}
+      <section class="filler"></section>
+    {% endif %}
+  {% endfor %}
+</nav>

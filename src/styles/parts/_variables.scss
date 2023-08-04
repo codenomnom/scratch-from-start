@@ -1,0 +1,21 @@
+$breakpoints: (
+  'xs': 0,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  '2xl': 1400px,
+  '3xl': 1600px
+);
+
+$color-must: #ef476f;
+$color-should: #ACCBE0;
+$color-could: #ffd166;
+//$color-must: #DF5646;
+//$color-should: #78ADD9;
+//$color-could: #ffc107;
+
+$color-page-background: #f5f5f5;
+
+$content-width: 760px;
+$content-padding-md: 36px;

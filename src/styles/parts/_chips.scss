@@ -1,0 +1,100 @@
+$chip-dot-size: 10px;
+
+@mixin chip {
+  display: inline-block;
+  height: 19px;
+  position: relative;
+  margin-left: 2px;
+  padding: 0 5px;
+  border-radius: 4px;
+
+  // font
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+  font-style: normal;
+
+  color: #073b4c;
+
+  transition: border-color .3s ease;
+}
+
+.chip {
+  @include chip;
+
+  &.important {
+    background-color: $color-must;
+  }
+
+  &.great {
+    background-color: $color-should;
+  }
+
+  &.extra {
+    background-color: $color-could;
+  }
+}
+
+em {
+  // dot
+  display: inline-block;
+  width: $chip-dot-size;
+  height: $chip-dot-size;
+  position: relative;
+  margin-left: 2px;
+  padding: 0;
+
+  border-radius: 50%;
+  border: 1px solid #f5f5f5;
+  font-size: 0;
+  line-height: 20px;
+  white-space: nowrap;
+  color: #073b4c;
+
+  cursor: help;
+
+  //--chip-color: #f3f3f3;
+  //background-color: var(--chip-color);
+  transition: border-color .3s ease;
+
+  &:after {
+    @include chip;
+
+    background: inherit;
+    top: -50%;
+    content: attr(data-help);
+    display: block;
+    left: calc(100% + 8px);
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .3s ease;
+    pointer-events: none;
+  }
+
+  &:hover:after {
+    opacity: 1;
+  }
+
+  &.chip-important {
+    background-color: $color-must;
+    &:hover {
+      border-color: $color-must;
+    }
+  }
+
+  &.chip-great {
+    background-color: $color-should;
+    &:hover {
+      border-color: $color-should;
+    }
+  }
+
+  &.chip-extra {
+    background-color: $color-could;
+    &:hover {
+      border-color: $color-could;
+    }
+  }
+}

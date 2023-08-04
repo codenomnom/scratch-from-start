@@ -1,0 +1,25 @@
+{% comment %}<h3>{% endcomment %}
+{% assign hLevel = 2 | plus: page.data.level %}
+  {% if page.data.level <= 2 %}
+    <h{{ hLevel }}>
+  {% endif %}
+
+  <a href="#{{ page.data.slug }}" data-draft="{{ page.data.draft }}">{% render 'renderPagePrefix', page: page, short: true %} {{ page.data.title }}</a>
+
+  {% if page.data.priority %}
+    {% chip page.data.priority %}
+  {% endif %}
+
+{% if page.data.level <= 2 %}
+  </h{{ hLevel }}>
+{% endif %}
+
+{% if page.children %}
+  <ul data-level="{{ page.data.level }}">
+    <li>
+      {% for child in page.children %}
+        {% render 'renderNavPage', page: child, parent: page, formatting: formatting %}
+      {% endfor %}
+    </li>
+  </ul>
+{% endif %}

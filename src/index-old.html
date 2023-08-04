@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scratch from Start</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Montserrat:wght@400;500;600;700;800;900&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Catamaran:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,700;0,900;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.scss">
+  <script type="module" src="scripts/index.js" defer></script>
+  <script class="dev" src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body id="app">
+
+  <article id="about" class="about column">
+    <div class="about-wrapper">
+      <h1>
+        About {{ message }}
+      </h1>
+    </div>
+  </article>
+
+<!--  <aside class="bottom left">-->
+<!--    <a href="#" class="no-decoration transparency" title="go to top"><img src="images/arrow-66.svg" alt=""></a>-->
+<!--  </aside>-->
+
+  <aside class="top right">
+    <a href="#" class="no-decoration transparency" title="Print version"><img src="images/printer-4.svg" alt=""></a>
+<!--    <a href="#" class="no-decoration transparency" title=""><img src="images/help-3.svg" alt=""></a>-->
+    <a href="#about" id="about-btn" class="no-decoration transparency" title="About"><img src="images/info-8.svg" alt=""></a>
+    <a href="https://github.com/codenomnom/scratch-from-start" class="no-external" title="Open Source Project" target="_blank">
+      <img src="images/github-1.svg" alt="">
+    </a>
+<!--    <a href="#" class="no-decoration transparency" title="Follow @ Twitter"><img src="images/twitter-4.svg" alt=""></a>-->
+  </aside>
+
+  <aside class="bottom right">
+    <a href="https://github.com/codenomnom/scratch-from-start" target="_blank" class="no-external underlined colorful" title="CHANGELOG">v.0.0.1</a>
+  </aside>
+
+  <section class="intro column mw800">
+    <a href="#" class="intro-logo no-decoration">
+      <img src="images/document.png" width="32" alt="anchor">
+    </a>
+
+    <h1>
+      <s>Scratch</s> From Start
+    </h1>
+
+    <p>
+      New project.
+      <br>
+
+      Someone needs to set it up. And that's you.
+      <br>
+
+      Rush it? Team suffers. Over-engineer it? It takes forever.
+      Try to remember all the settings? You fail.
+    </p>
+
+    <p>
+      <s>You fail again.</s><br>You <strong>Scratch From Start</strong>, do it right, like the pro you are!
+    </p>
+
+    <p>
+      Here's a <u>dead simple list</u> of things that are
+      <span class="chip l1">important</span>,
+      <span class="chip l2">preferred</span> or
+      <span class="chip l3">extra</span> for your project.
+      Best practices to chose from, <u>regardless</u> of your tech stack.
+      Learn the reasoning behind each option, along with suggestions and guides.
+    </p>
+
+    <p>Rule it!</p>
+  </section>
+
+  <nav class="toc column">
+    <section class="chapter">
+      <div class="chapter-container">
+        <h3><a href="#chapter-1~foundation">Chapter 1: Foundation</a></h3>
+        <ul>
+          <li>
+            <h4>01 &mdash; Repository</h4>
+
+            <ol>
+              <li>
+                <a href="#" class="no-decoration no-hover">1. Setup repository</a>
+                <ol type="a">
+                  <li>
+                    <a href="#" class="no-decoration no-hover2">
+                      a. Set <code>git</code> name & email <em class="l1" data-help="important">important</em>
+                    </a>
+                  </li>
+                  <li>b. Pick git workflow <em class="l1" data-help="important">important</em></li>
+                  <li>c. Protect master branch (enforce PRs) <em class="l2" data-help="preferred">preferred</em></li>
+                  <li>d. Configure pipeline <em class="l3" data-help="extra">extra</em></li>
+                </ol>
+              </li>
+
+              <li>2. Add <code>.gitignore</code> file <em class="l1" data-help="important">important</em></li>
+            </ol>
+          </li>
+
+          <li>
+            <h4>02 &mdash; Basics</h4>
+
+            <ol>
+              <li>
+                1. Implement run scripts
+                <ol type="a">
+                  <li>1.1. Add instructions in the <kbd>README</kbd> <em class="l1" data-help="important">important</em></li>
+                </ol>
+              </li>
+
+              <li>
+                3. Create a <code>CHANGELOG</code> <em class="l2" data-help="great">great</em>
+                <ol type="a">
+                  <li>3.1. Select a style and document it<em class="l2" data-help="great">great</em></li>
+                  <li>3.2. Enforce with a pre-commit hook <em class="l3" data-help="extra">extra</em></li>
+                  <li>3.3. Automatic changelog generator <em class="l3" data-help="extra">extra</em></li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <h4>03 &mdash; Code Quality</h4>
+
+            <ol>
+              <li>
+                1. Static code analytics
+                <ol type="a">
+                  <li>1.2. Make sure it lints <em class="l1" data-help="important">important</em></li>
+                  <li>1.2. Enable auto fix / code format <em class="l2" data-help="great">great</em></li>
+                  <li>1.3. Configure <code>git</code> pre-commit hook <em class="l2" data-help="great">great</em></li>
+                  <li>1.4. Files & folders linting <em class="l3" data-help="extra">extra</em></li>
+                </ol>
+              </li>
+
+              <li>
+                2. Configure test suite (<i>if not MVP/POC</i>) <em class="l2" data-help="great">great</em>
+                <ol type="a">
+                  <li>2.1. Configure test coverage tool <em class="l3" data-help="extra">extra</em></li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="chapter-container">
+        <h3>Chapter 2: Project Boilerplate</h3>
+        <ul>
+          <li>
+            <h4>04 &mdash; Structure & Placeholders</h4>
+
+            <ol>
+              <li>
+                1. Environmental Variables <em class="l1" data-help="important">important</em>
+              </li>
+              <li>
+                2. UI Components Library
+              </li>
+
+              <li>3. Folder Structure</li>
+              <li>4. Router</li>
+              <li>
+                5. Placeholders
+                <ol type="a">
+                  <li>5.1. Global storage</li>
+                  <li>5.2. Global event bus <em class="l1" data-help="important">important</em></li>
+                  <li>5.3. Global modal services <em class="l2" data-help="great">great</em></li>
+                  <li>5.4. Utils folder <em class="l3" data-help="extra">extra</em></li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <h4>05 &mdash; Styles Configuration</h4>
+
+            <ol>
+              <li>1. Style linting</li>
+              <li>
+                2. Defaults & Placeholders
+                <ol type="a">
+                  <li>2.1. Global reset/normalize</li>
+                  <li>2.1. Variables & typography</li>
+                  <li>2.2. Overrides & mixins</li>
+                  <li>2.3. Responsive & media queries</li>
+<!--                  <li>4.2. Typography</li>-->
+<!--                  <li>4.3. Overrides</li>-->
+<!--                  <li>4.4. Responsiveness</li>-->
+                </ol>
+              </li>
+              <li>3. Preprocessor <i>(SCSS, Stylus)</i></li>
+              <li>4. Browser list</li>
+            </ol>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="chapter-container">
+        <h3>Chapter 3: Services</h3>
+
+        <ul>
+          <li>
+            <h4>06 &mdash; Backend?</h4>
+
+            <ol>
+              <li>1. Web service <em class="l1" data-help="important">important</em></li>
+              <li>2. Global error handling</li>
+              <li>3. Global loading state</li>
+            </ol>
+          </li>
+
+          <li>
+            <h4>07 &mdash; Authentication?</h4>
+
+            <ol>
+              <li>1. User model, storage support, defaults</li>
+              <li>2. Authentication mechanism placeholder</li>
+              <li>3. A way to authenticate with each request</li>
+              <li>4. Simple auth guard (using hardcoded user in store)</li>
+            </ol>
+          </li>
+
+          <li>
+            <h4>08 &mdash; i18n?</h4>
+
+            <ol>
+              <li>1. i18n library set up</li>
+              <li>2. Translation files set up</li>
+              <li>3. Lang Switcher</li>
+              <li>4. Sample text translated (just one)</li>
+            </ol>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="filler"></section>
+  </nav>
+
+  <main class="column mw800">
+    <section>
+      <h2 class="content-heading"><a href="#chapter-1~foundation" class="anchor" id="chapter-1~foundation">Chapter 1: Foundation</a></h2>
+      <p>
+        Each new project setup contains a few steps <u>regardless</u> of the technology used, or any other specifics.
+        Some of them might look strange, btu they follow the best proven practices that would save you numerous hours of troubleshooting and bug hunting.
+      </p>
+
+      <article>
+        <h3 class="content-heading"><a href="#01-repository" class="anchor" id="01-repository">01 &mdash; Repository</a></h3>
+
+        <h4><a href="#setup-repository" class="anchor" id="setup-repository">1.1. Setup repository</a></h4>
+        <p>
+          There are a few things you need to do before coding - configure your <code>Git</code>.
+        </p>
+
+
+        <article>
+          <h5><a href="#configure-name-and-email" class="anchor" id="configure-name-and-email">1.1.A Configure name & email</a> <em class="l1" data-help="important">important</em></h5>
+          <p>
+            It's very often that you have multiple accounts for your git provider.
+            It's <strong>crucial</strong> that you configure your local repository to use the appropriate name and email.
+          </p>
+
+          <p>
+            <pre><code>git config user.name <i># shows your current name</i>
+              git config user.email <i># show your current email</i>
+
+              git config user.name "John Doe" <i># set name in current repository</i>
+              git config user.email "john@doe.com" <i># set email in current repository</i>
+            </code></pre>
+          </p>
+        </article>
+
+        <article>
+          <h5><a href="#pick-git-workflow" class="anchor" id="pick-git-workflow">1.1.B Pick git workflow</a> <em class="l1" data-help="important">important</em></h5>
+          <p>
+            Getting this right is important even if you work alone, because of consistency.
+            Any team members should be synchronized upfront on the
+            <a href="https://www.atlassian.com/git/tutorials/comparing-workflows" target="_blank" class="underlined colorful">git workflow</a> to be used.
+            Simple GitFlow would suffice. The decision should be well documented somewhere easily accessible.
+          </p>
+        </article>
+
+        <article>
+          <h5><a href="#protect-master-branch" class="anchor" id="protect-master-branch">1.1.C Protect master branch (enforce PRs)</a> <em class="l2" data-help="great">great</em></h5>
+          <p>
+            Master (main) branch should be protected so no code ends up there directly.
+            This would enforce usage of PRs, which are a necessity if working in a team.
+          </p>
+          <p class="note">Note: Can be skipped if working alone.</p>
+        </article>
+
+        <article>
+          <h5><a href="#" class="anchor">1.1.D Configure pipeline</a> <em class="l3" data-help="extra">extra</em></h5>
+          <p>
+            Each git hosting provides pipelines, and we need a very very basic one that just builds the project (typically done in an hour).
+            This would help a lot when doing PRs so that we know  the code we’re trying to merge is at least "buildable".
+            Having a pipeline would allow us to extend it in the future with linting, tests and deployment procedures.
+          </p>
+        </article>
+
+        <h4><a href="#" class="anchor">1.2. Add <code>.gitignore</code> file</a> <em class="l1" data-help="important">important</em></h4>
+        <p>
+          This one requires no explanation, but is often missed. It should include all app-specific folders (www for Angular, build for React, dist for Vue, etc), along with node_modules and any sensitive containing ones (.aws).
+        </p>
+      </article>
+
+      <article>
+        <h3 class="content-heading"><a href="#02-basics" class="anchor" id="02-basics">02 &mdash; Basics</a></h3>
+
+        <h4><a href="#" class="anchor">1.1. Setup repository</a></h4>
+        <p>
+          There are a few things you need to do before coding - configure your <code>git</code>.
+        </p>
+
+
+        <article>
+          <h5><a href="#" class="anchor">1.1.A Configure name & email</a> <em class="l1" data-help="important">important</em></h5>
+          <p>
+            It's very often that you have multiple accounts for your git provider.
+            It's <strong>crucial</strong> that you configure your local repository to use the appropriate name and email.
+          </p>
+
+          <p>
+            To do so, use <code>git config user.name</code>.
+          </p>
+        </article>
+
+        <article>
+          <h5><a href="#" class="anchor">1.1.B Pick git workflow</a> <em class="l1" data-help="important">important</em></h5>
+          <p>
+            Getting this right is important even if you work alone, because of consistency.
+            Any team members should be synchronized upfront on the <a href="https://www.atlassian.com/git/tutorials/comparing-workflows" target="_blank">git workflow</a> to be used.
+            Simple GitFlow would suffice. The decision should be well documented somewhere easily accessible.
+          </p>
+        </article>
+
+        <article>
+          <h5><a href="#" class="anchor">1.1.C Protect master branch (enforce PRs)</a> <em class="l2" data-help="great">great</em></h5>
+          <p>
+            Master (main) branch should be protected so no code ends up there directly.
+            This would enforce usage of PRs, which are a necessity if working in a team.
+          </p>
+          <p class="note">Note: Can be skipped if working alone.</p>
+        </article>
+
+        <article>
+          <h5><a href="#" class="anchor">1.1.D Configure pipeline</a> <em class="l3" data-help="extra">extra</em></h5>
+          <p>
+            Each git hosting provides pipelines, and we need a very very basic one that just builds the project (typically done in an hour).
+            This would help a lot when doing PRs so that we know  the code we’re trying to merge is at least "buildable".
+            Having a pipeline would allow us to extend it in the future with linting, tests and deployment procedures.
+          </p>
+        </article>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    const aboutSection = document.getElementById('about')
+    const aboutBtn = document.getElementById('about-btn');
+    aboutBtn.addEventListener('click', (e) => {
+      // TODO: deal with this mess - it needs to keep proper history
+      if (location.hash === '#about') {
+        e.preventDefault();
+        window.location.hash = '';
+        history.pushState('', document.title, window.location.pathname + window.location.search);
+      }
+    });
+
+    window.onhashchange = (e) => {
+      // console.log(location.hash);
+      if (location.hash === '#about') {
+        aboutSection?.classList.add('expanded');
+      } else {
+        aboutSection?.classList.remove('expanded');
+      }
+    };
+
+
+  </script>
+  <script class="dev">
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          message: 'Hello Vue!'
+        };
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

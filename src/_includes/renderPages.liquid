@@ -1,0 +1,7 @@
+{% comment %}<strong>render pages (total: {{ filteredPagesByLevel.length }})</strong>{% endcomment %}
+{% comment %}<pre>{% endcomment %}
+  {% comment %}pages: {{ pages.length }}{% endcomment %}
+{% comment %}</pre>{% endcomment %}
+{% for page in pages %}
+  {% render 'renderPage', page: page, parent: parent, formatting: formatting %}
+{% endfor %}

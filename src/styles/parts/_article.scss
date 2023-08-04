@@ -1,0 +1,69 @@
+section article article {
+  padding-left: 20px;
+
+  h5 {
+    margin-block-end: 0.5rem;
+  }
+
+  & > p {
+    margin-block-start: 0;
+  }
+}
+
+main {
+  section {
+    h1, h2, h3, h4, h5, h6 {
+      & > a {
+        font-size: 0;
+        float: left;
+        padding-right: 6px;
+        margin-left: -22px;
+
+        svg, img {
+          vertical-align: middle;
+          visibility: hidden;
+        }
+      }
+
+      &:hover > a {
+        svg, img {
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  @include media("<lg") {
+    padding-left: $content-padding-md;
+    padding-right: $content-padding-md;
+  }
+}
+//h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
+//  position: relative;
+//
+//  &:before {
+//    position: absolute;
+//    top: 50%;
+//    transform: translate(calc(-100% - 6px), -50%);
+//    transition: opacity .3s ease;
+//    line-height: initial;
+//    pointer-events: none;
+//
+//    // overrides because of regular anchor
+//    height: initial !important;
+//    width: 16px !important;
+//    bottom: auto !important;
+//    background-color: transparent !important;
+//    opacity: 0 !important;
+//
+//    content: url('data:image/svg+xml; utf8, <svg class="anchor" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z" /></svg> ') !important;
+//  }
+//
+//  &:hover {
+//    color: initial;
+//
+//    &:before {
+//      opacity: 1 !important;
+//    }
+//  }
+//}

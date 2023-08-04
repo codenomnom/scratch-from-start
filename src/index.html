@@ -1,0 +1,61 @@
+---
+title: 'Scratch from Start - FE'
+layout: 'layouts/root.html'
+---
+{% include "about.html" %}
+
+<!--  <aside class="bottom left">-->
+<!--    <a href="#" class="no-decoration transparency" title="go to top"><img src="/images/arrow-66.svg" alt=""></a>-->
+<!--  </aside>-->
+
+<aside class="media">
+  media:
+  <div class="xl3">3xl</div>
+  <div class="xl2">2xl</div>
+  <div class="xl">xl</div>
+  <div class="lg">lg</div>
+  <div class="md">md</div>
+  <div class="sm">sm</div>
+  <div class="xs">xs</div>
+</aside>
+
+<aside class="top right">
+  <a href="#" class="aside-icon" title="The page is suitable for printing">
+    <span>Print</span>
+    <img src="/images/printer-4.svg" alt="">
+  </a>
+  <!--    <a href="#" class="no-decoration transparency" title=""><img src="/images/help-3.svg" alt=""></a>-->
+  <a href="#about" id="about-btn" class="aside-icon" title="About">
+    <span>About</span>
+    <img src="/images/info-8.svg" alt="">
+  </a>
+  <a href="https://github.com/codenomnom/scratch-from-start" class="aside-icon no-external" title="Open Source Project" target="_blank">
+    <span>Contribute</span>
+    <img src="/images/github-1.svg" alt="">
+  </a>
+  <!--    <a href="#" class="no-decoration transparency" title="Follow @ Twitter"><img src="/images/twitter-4.svg" alt=""></a>-->
+</aside>
+
+<aside class="bottom right">
+  <a href="https://github.com/codenomnom/scratch-from-start" target="_blank" class="no-external underlined colorful" title="changelog">ver {{ pkg.version }}</a>
+</aside>
+
+{% include "intro.html" %}
+{% comment %}{% include "toc.html" %}{% endcomment %}
+
+{%- render 'renderNav', pages: collections.pages, formatting: formatting -%}
+
+<main>
+  {% render 'renderPages', pages: collections.pages, formatting: formatting %}
+
+  <div class="back-to-top-wrapper">
+    <a href="javascript: window.scrollTo(0, 0); void(0);" class="back-to-top-link aside-icon" aria-label="Scroll to Top">
+      <!--      <img src="/images/circle-chevron-up-solid.svg" alt="">-->
+      <img src="/images/circle-up-regular.svg" alt="">
+      <!--      <img src="/images/upload-12.svg" alt="">-->
+      <!--      <img src="/images/arrow-66.svg" alt="">-->
+      <!--      <img src="/images/arrow-70.svg" alt="">-->
+      <span>Go up</span>
+    </a>
+  </div>
+</main>

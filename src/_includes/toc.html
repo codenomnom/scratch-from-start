@@ -1,0 +1,209 @@
+<nav class="toc column">
+  <section class="chapter">
+    <div class="chapter-container">
+      <h3><a href="#chapter-1~foundation">Chapter 1: Foundation</a></h3>
+      <ul>
+        <li>
+          <h4>01 &mdash; Repository</h4>
+
+          <ol>
+            <li>
+              <a href="#1.1-configure-repository">1. Configure repository</a> {% chip "important" %}
+              <ol type="a">
+                <li>
+<!--                  <a href="#" class="no-decoration no-hover2">a. Set <code>git</code> name & email</a> {% chip "important" %}-->
+<!--                  a. Set <code>git</code> name & email {% chip "important" %}-->
+                  <a href="#1.1.a-set-git-name-and-email">a. Set git <code>name</code> and <code>email</code></a>
+                </li>
+                <li>
+                  <a href="#">b. Configure <code>lf/crlf</code></a>
+                </li>
+<!--                <li>d. Configure pipeline {% chip "extra" %}</li>-->
+              </ol>
+            </li>
+
+            <li><a href="#">2. Add <code>.gitignore</code> file</a> {% chip "important" %}</li>
+            <li>3. Protect master branch (PRs) {% chip "great" %}</li>
+          </ol>
+        </li>
+
+        <li>
+          <h4>02 &mdash; Basics</h4>
+
+          <ol>
+            <li>1. Pick a suitable git workflow {% chip "important" %}</li>
+<!--            <li>-->
+<!--              1. Implement run scripts-->
+<!--              <ol type="a">-->
+<!--                <li>1.1. Add instructions in the <kbd>README</kbd> {% chip "important" %}</li>-->
+<!--              </ol>-->
+<!--            </li>-->
+
+<!--            <li>-->
+<!--              3. Create a <code>CHANGELOG</code> {% chip "great" %}-->
+<!--              <ol type="a">-->
+<!--                <li>3.1. Select a style and document it {% chip "great" %}</li>-->
+<!--                <li>3.2. Enforce with a pre-commit hook {% chip "extra" %}</li>-->
+<!--                <li>3.3. Automatic changelog generator {% chip "extra" %}</li>-->
+<!--              </ol>-->
+<!--            </li>-->
+
+            <li>
+              2. Setup commit msg convention {% chip "great" %}
+              <ol type="a">
+                <li>2.1. Enforce with a pre-commit hook {% chip "great" %}</li>
+              </ol>
+            </li>
+
+            <li>
+              3. Create a <code>CHANGELOG</code> or <code>ADRs</code>{% chip "great" %}
+              <ol type="a">
+                <li>3.1. Automatic changelog generator {% chip "extra" %}</li>
+              </ol>
+            </li>
+
+            <li>
+              <a href="#describe-everything-in-readme">
+                4. Describe everything in <code>README.md</code>
+              </a> {% chip "important" %}
+            </li>
+<!--            <li>5. Make sure it runs! {% chip "important" %}</li>-->
+          </ol>
+        </li>
+
+        <li>
+          <h4>03 &mdash; Code Quality</h4>
+
+          <ol>
+            <li>
+              <a href="#static-code-analysis-and-formatting">
+                1. Static code analysis & formatting
+              </a> {% chip "important" %}
+              <ol type="a">
+                <li>1.1. Enable auto fix / code format {% chip "great" %}</li>
+                <li>1.2. Configure <code>git</code> pre-commit hook {% chip "great" %}</li>
+                <li>1.3. Files & folders linting {% chip "extra" %}</li>
+              </ol>
+            </li>
+
+            <li>
+              2. Configure test suite {% chip "important" %}
+              <ol type="a">
+                <li>2.1. Configure test coverage tool {% chip "extra" %}</li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+
+        <li>
+          <h5 style="display: inline-block">Outcome:</h5> Make sure it works! {% chip "important" %}
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="chapter-container">
+      <h3><a href="#chapter-2~project-boilerplate">Chapter 2: Project Boilerplate</a></h3>
+      <ul>
+        <li>
+          <h4>04 &mdash; Structure & Placeholders</h4>
+
+          <ol>
+            <li>
+              1. Environmental Variables {% chip "important" %}
+            </li>
+            <li>
+              2. UI Components Library
+            </li>
+
+            <li>3. Folder Structure</li>
+            <li>4. Router</li>
+            <li>
+              5. Placeholders
+              <ol type="a">
+                <li>5.1. Global storage</li>
+                <li>5.2. Global event bus {% chip "important" %}</li>
+                <li>5.3. Global modal services {% chip "great" %}</li>
+                <li>5.4. Utils folder {% chip "extra" %}</li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <h4>05 &mdash; Styles Configuration</h4>
+
+          <ol>
+            <li>1. Style linting</li>
+            <li>
+              2. Defaults & Placeholders
+              <ol type="a">
+                <li>2.1. Global reset/normalize</li>
+                <li>2.1. Variables & typography</li>
+                <li>2.2. Overrides & mixins</li>
+                <li>2.3. Responsive & media queries</li>
+                <!--                  <li>4.2. Typography</li>-->
+                <!--                  <li>4.3. Overrides</li>-->
+                <!--                  <li>4.4. Responsiveness</li>-->
+              </ol>
+            </li>
+            <li>3. Preprocessor <i>(SCSS, Stylus)</i></li>
+            <li>4. Browser list</li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="chapter-container">
+      <h3><a href="#chapter-3~services">Chapter 3: Services</a></h3>
+
+      <ul>
+        <li>
+          <h4>06 &mdash; Backend?</h4>
+
+          <ol>
+            <li>1. Web service {% chip "important" %}</li>
+            <li>2. Global error handling</li>
+            <li>3. Global loading state</li>
+          </ol>
+        </li>
+
+        <li>
+          <h4>07 &mdash; Authentication?</h4>
+
+          <ol>
+            <li>1. User model, storage support, defaults</li>
+            <li>2. Authentication mechanism placeholder</li>
+            <li>3. A way to authenticate with each request</li>
+            <li>4. Simple auth guard</li>
+          </ol>
+        </li>
+
+        <li>
+          <h4>08 &mdash; i18n?</h4>
+
+          <ol>
+            <li>1. i18n library set up</li>
+            <li>2. Translation files set up</li>
+            <li>3. Lang Switcher</li>
+            <li>4. Sample text translated (just one)</li>
+          </ol>
+        </li>
+
+        <li>
+          <h4>09 &mdash; Shipping It</h4>
+
+          <ol>
+            <li>1. Local scripts</li>
+            <li>2. Packaging & bundling</li>
+            <li><a href="#ci/cd-pipeline">3. CI/CD pipeline</a></li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="filler"></section>
+</nav>

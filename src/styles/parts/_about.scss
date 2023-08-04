@@ -1,0 +1,30 @@
+article.about {
+  position: relative;
+  background-color: $color-could;
+
+  font-family: 'Montserrat', sans-serif; // same as intro
+  font-size: 14px;
+  font-weight: 500;
+
+  .about-wrapper {
+    position: relative;
+    width: 800px;
+    justify-content: flex-start;
+    overflow: hidden;
+    max-height: 0;
+
+    transition: max-height .7s ease;
+
+    @include media("<lg") {
+      padding-left: $content-padding-md;
+      padding-right: $content-padding-md;
+    }
+  }
+
+  &:target {
+    .about-wrapper {
+      margin-top: 0;
+      max-height: 100vh;
+    }
+  }
+}

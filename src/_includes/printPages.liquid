@@ -1,0 +1,70 @@
+{% for page in collections.pages %}
+  {% if page.data.parentFolder == parent %}
+    <pre>
+      id: {{ page.data.id }}
+      title: {{ page.data.title }}
+      level: {{ page.data.level }}
+      parentFolder: {{ page.data.parentFolder }}
+
+      inputPath: {{ page.inputPath }}
+      filePathStem: {{ page.filePathStem }}
+    </pre>
+    {% if page.data.level == 1 %}
+      <section class="chapter" id="{{ page.data.slug }}">
+        <h2>
+          <a href="#{{ page.data.slug }}" class="anchor"><img src="/images/anchor.svg" alt=""></a>
+          Chapter {{ page.data.index | plus: 1 }}: {{ page.data.title }}
+        </h2>
+
+        {{ page.templateContent }}
+
+        {% include 'printPages', parent: page.inputPath %}
+      </section>
+    {% endif %}
+
+    {% if page.data.level == 2 %}
+      <section id="{{ page.data.slug }}">
+        <h3>
+          <a href="#{{ page.data.slug }}" class="anchor"><img src="/images/anchor.svg" alt=""></a>
+          0{{ page.data.index | plus: 1 }} — {{ page.data.title }}
+        </h3>
+
+        {{ page.templateContent }}
+
+        {% include 'printPages', parent: page.inputPath %}
+      </section>
+    {% endif %}
+
+    {% if page.data.level == 3 %}
+      <article id="{{ page.data.slug }}">
+        <h4>
+          <a href="#{{ page.data.slug }}" class="anchor"><img src="/images/anchor.svg" alt=""></a>
+          {{ page.data.title }}
+          {% if page.data.priority %}
+            {% chip page.data.priority %}
+          {% endif %}
+        </h4>
+
+        {{ page.templateContent }}
+
+        {% include 'printPages', parent: page.inputPath %}
+      </article>
+    {% endif %}
+
+    {% if page.data.level == 4 %}
+      <article id="{{ page.data.slug }}">
+        <h5>
+          <a href="#{{ page.data.slug }}" class="anchor"><img src="/images/anchor.svg" alt=""></a>
+          {{ page.data.title }}
+          {% if page.data.priority %}
+            {% chip page.data.priority %}
+          {% endif %}
+        </h5>
+
+        {{ page.templateContent }}
+
+        {% include 'printPages', parent: page.inputPath %}
+      </article>
+    {% endif %}
+  {% endif %}
+{% endfor %}

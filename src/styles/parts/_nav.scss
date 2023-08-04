@@ -1,0 +1,89 @@
+nav {
+  padding: 0 10%;
+  min-height: 80vh;
+
+  a[data-draft="true"] {
+    opacity: .6;
+  }
+
+  .chapter {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0 2%;
+    border-radius: 5px;
+    padding-top: 20px;
+    transition: background-color .1s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, .75);
+      background-color: white;
+    }
+
+    &-container {
+      ul, ol {
+        list-style: none;
+        color: #b9b9b9;
+      }
+
+      ul {
+        padding-inline-start: 0;
+      }
+
+      ul[data-level="2"], ul[data-level="3"], ol {
+        padding-inline-start: 26px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      a {
+        &:hover {
+          &:before {
+            display: none; // TODO: put before only if link is not in the nav
+          }
+          text-decoration: underline;
+        }
+      }
+
+      h4, h5, a {
+        color: #0D112B; // TODO: extract
+      }
+    }
+  }
+
+  @include media("<2xl") {
+    section.chapter {
+      margin: 0 1%;
+    }
+  }
+
+  @include media("<xl") {
+    flex-wrap: wrap;
+    section.chapter {
+      flex-basis: 50%;
+      margin: 0;
+    }
+    section.filler {
+      flex-basis: 50%;
+    }
+  }
+
+  @include media("<md") {
+    section.chapter {
+      flex-basis: 100%;
+    }
+  }
+
+  @include media("<3xl") {
+    padding: 0 6%;
+  }
+
+  @include media("<2xl") {
+    padding: 0 3%;
+  }
+
+  @include media("<xl") {
+    padding: 0 2%;
+  }
+}

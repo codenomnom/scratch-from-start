@@ -1,0 +1,33 @@
+{% comment %}deal with all that, using orderLocal and orderGlobal (maybe it's best to have a snippet in config{% endcomment %}
+{% comment %}{%- assign chunks = page.data.order | split: '.' -%}{% endcomment %}
+{% if page.data.level == 1 %}
+  Chapter {{ page.data.orderGlobal[0] }}:
+{% endif %}
+
+{% if page.data.level == 2 %}
+  {%- assign index = page.data.globalLevelIndex -%}
+  {%- if index < 10 -%}0{%- endif -%}
+  {{ index }} —
+{% endif %}
+
+{% if page.data.level == 3 %}
+  {% if short %}
+    {% comment %}{{ chunks[2] }}.{% endcomment %}
+    {{ page.data.orderLocal[2] }}.
+  {% else %}
+    {% comment %}{{ chunks[1] }}.{{ chunks[2] }}.{% endcomment %}
+    {{ page.data.orderGlobal[1] }}.{{ page.data.orderLocal[2] }}.
+  {% endif %}
+{% endif %}
+
+{% if page.data.level == 4 %}
+  {% if short %}
+    {% comment %}{{ chunks[3] | minus: 1 | numberToAlphabet }}.{% endcomment %}
+    {{ page.data.orderLocal[2] }}.{{ page.data.orderLocal[3] | minus: 1 | numberToAlphabet | upcase }}.
+  {% else %}
+    {% comment %}{{ chunks[1] }}.{{ chunks[2] }}.{{ chunks[3] | minus: 1 | numberToAlphabet | upcase }}{% endcomment %}
+    {{ page.data.orderGlobal[1] }}.{{ page.data.orderLocal[2] }}.{{ page.data.orderLocal[3] | minus: 1 | numberToAlphabet | upcase }}
+  {% endif %}
+{% endif %}
+
+{% comment %}[{{ page.data.orderLocal }}, {{ page.data.orderGlobal }}]{% endcomment %}

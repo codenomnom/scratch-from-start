@@ -1,0 +1,34 @@
+{% comment %}<hr>{% endcomment %}
+{% comment %}render page{% endcomment %}
+{% comment %}{% endcomment %}
+{% comment %}<pre>{% endcomment %}
+  {% comment %}id: {{ page.data.id }}{% endcomment %}
+  {% comment %}title: {{ page.data.title }}{% endcomment %}
+  {% comment %}level: {{ page.data.level }}{% endcomment %}
+  {% comment %}index: {{ page.data.index }}{% endcomment %}
+  {% comment %}folder: {{ page.data.folder }}{% endcomment %}
+  {% comment %}parentFolder: {{ page.data.parentFolder }}{% endcomment %}
+{% comment %}{% endcomment %}
+  {% comment %}order: {{ page.data.order }}{% endcomment %}
+  {% comment %}inputPath: {{ page.inputPath }}{% endcomment %}
+  {% comment %}filePathStem: {{ page.filePathStem }}{% endcomment %}
+{% comment %}{% endcomment %}
+  {% comment %}sub pages:{% endcomment %}
+{% comment %}</pre>{% endcomment %}
+
+{%- assign tagLevel = page.data.level | minus: 1 -%}
+{% assign htmlTag = formatting.main.pagesTagsByLevel[tagLevel] %}
+{% assign hLevel = 1 | plus: page.data.level %}
+
+<{{ htmlTag }} class="chapter" id="{{ page.data.slug }}">
+  <h{{ hLevel }}>
+    {% render 'headerAnchor', page: page %}
+    {% render 'renderPagePrefix', page: page %}
+    {{ page.data.title }}
+    {% render 'pageChip', page: page %}
+  </h{{ hLevel }}>
+
+  {{ page.templateContent }}
+
+  {% render 'renderPages', pages: page.children, parent: page, formatting: formatting %}
+</{{ htmlTag }}>
